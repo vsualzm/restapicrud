@@ -1,4 +1,4 @@
-package com.restapicrud.restapi.controllers;
+package com.restapicrud.restapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,10 @@
-package com.restapicrud.restapi.controllers.entities;
+package com.restapicrud.restapi.entities;
 
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "data")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
