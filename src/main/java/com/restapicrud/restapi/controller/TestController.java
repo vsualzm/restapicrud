@@ -15,6 +15,7 @@ public class TestController {
 
     @Autowired
     UserRepository userRepository;
+
     @GetMapping("/user")
     public String hello(){
         return "TEST SPRING";
@@ -34,5 +35,18 @@ public class TestController {
     @GetMapping("getById")
     public UserEntity getById(@RequestParam int id){
         return  userRepository.findById(id).get();
+    }
+
+    @PostMapping("/updateUser")
+    public UserEntity updateUser(@RequestBody UserEntity param){
+        userRepository.save(param);
+        return param;
+    }
+
+    @GetMapping("/deleteUser")
+    public List<UserEntity> deleteUser(@RequestParam int id){
+        userRepository.deleteById(id);
+        List<UserEntity> userList = userRepository.findAll();
+        return userList;
     }
 }
